@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookstoreapp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <div class="cart box_1">
+    <h3> $<span id="cart_total" class="simpleCart_total" > <%= cart.total %> </span>
+        (<span id="cart_items_count" class="simpleCart_quantity"> <%= cart.count %> Items</span>)
+        <img src="/images/bag.png" alt="" />
+    </h3>
+
+    <p><a href="/cart" class="simpleCart_empty">Your cart</a></p>
+</div>
+
+  </body>
+</html>
